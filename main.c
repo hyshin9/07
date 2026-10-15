@@ -1,17 +1,18 @@
-#include <stdio.h>
+#include <stdio.h> 
+void f(void);
 
-
-int inc(int counter);
-
-int main(void){
-    int i = 10;
-    printf("before i = %d\n", i);
-    inc(i);
-    printf("after i = %d\n", i);
+int i;
+int main(void)
+{
+    for (i=0; i<5; i++)
+    {
+        f();
+    }
     return 0;
 }
 
-int inc(int counter){
-    counter++;
-    return counter;
+void f(void)
+{
+    for (i = 0; i < 10; i++)
+        printf("#");
 }
